@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDV221 Intro Javascript</title>
+
+    <style>
+        .errMsg {
+            color:red;
+            font-weight: 200;
+        }
+
+    </style>
+
+    <script>
+    	function compareNames()
+	{var name1=document.querySelector("#name1").value;
+		//give a var to name 1
+		
+	var name2=document.querySelector("#name2").value;
+		//give a var to name 2
+		
+	if (name1.toUpperCase()==name2.toUpperCase())
+		{var result="Same"}
+		//if they are equal it will result with "Same"
+	else
+		{var result="Different"}
+		//if they are not equal then it will result with "Different"
+		
+		document.querySelector("#result").innerHTML=result;
+		//placing the result value of the if statement into it's own var
+	}
+	//end of function
+	
+	function clearResults()
+	
+	{document.querySelector("#result").innerHTML="";
+	document.querySelector("#displayMsg").innerHTML="";
+	document.querySelector("#displayMsg2").innerHTML="";}
+	
+	//clear span id results
+	
+	
+	
+	
+	
+	
+
+        function processForm(){
+            //this will run when the form is submitted. 
+            //It will run the validation and display the message
+            //alert("insides ProcessForm()");
+
+            let inValue= document.querySelector("#name1").value; //gets the input
+            //alert( validateName(inValue)); 	//for testing purposes
+			//assign the return message to the display area on the page
+			document.querySelector("#displayMsg").innerHTML = validateName(inValue);
+
+        }
+
+        function validateName(inValue) {
+            //this function will validate the form input.
+            //It will display a message based upon the validation of the input.
+            //alert("inside validateName()");
+			//alert("inValue contains " + inValue);	//prove the input was passed in
+			
+			if(inValue=="" || inValue.trim()==""){
+				return "Input Required";	//return a message 
+			}
+			
+			if( inValue.indexOf("/")!= -1 || inValue.indexOf("\\")!= -1 || inValue.indexOf("'")!= -1){
+				return "Invalid Content";
+			}
+			
+			if( !isNaN(inValue) ){
+				return "Invalid Content";
+			}
+			
+			if(inValue>100){
+				return "Invalid Content"}
+				
+			return "Valid Content";			//return default message
+        }
+
+        function resetForm() {
+            //this function will run with the reset function to reset the form back to original view
+            //alert("inside resetForm()");
+            {document.querySelector("#displayMsg").innerHTML="";}
+        }
+        
+        
+        
+        
+        
+         function processForm2(){
+            //this will run when the form is submitted. 
+            //It will run the validation and display the message
+            //alert("insides ProcessForm()");
+
+            let inValue= document.querySelector("#name2").value; //gets the input
+            //alert( validateName(inValue)); 	//for testing purposes
+			//assign the return message to the display area on the page
+			document.querySelector("#displayMsg2").innerHTML = validateName(inValue);
+
+        }
+
+        function validateName(inValue) {
+            //this function will validate the form input.
+            //It will display a message based upon the validation of the input.
+            //alert("inside validateName()");
+			//alert("inValue contains " + inValue);	//prove the input was passed in
+			
+			if(inValue=="" || inValue.trim()==""){
+				return "Input Required";	//return a message 
+			}
+			
+			if( inValue.indexOf("/")!= -1 || inValue.indexOf("\\")!= -1 || inValue.indexOf("'")!= -1){
+				return "Invalid Content";
+			}
+			
+			if( !isNaN(inValue) ){
+				return "Invalid Content";
+			}
+			
+			if(inValue>100){
+				return "Invalid Content"}
+				
+			return "Valid Content";			//return default message
+        }
+
+        function resetForm2() {
+            //this function will run with the reset function to reset the form back to original view
+            //alert("inside resetForm()");
+            {document.querySelector("#displayMsg2").innerHTML="";}
+        }
+        
+        
+    
+
+
+
+
+    </script>
+</head>
+<body>
+    <h1>WDV221 Intro to Javascript</h1>
+    <h2>UNIT-8 Testing and Validation</h2>
+    <h3>Testing the validateName( )</h3>
+    
+    
+    
+    <form id="form1" name="form1" method="post" action="">
+
+  
+
+  
+
+  </p>
+
+</form>
+
+
+    
+    <form method="POST" action="#">
+        <p>
+            <label for="name1">Name 1: 
+                <input name="first_name" id="name1" type="text" >
+                <span class="errMsg" id="first_name_err"></span>
+                <span style="color:red;" id="displayMsg"></span>
+            </label>
+        </p>
+        
+        <p><label for="name2">Name 2: 
+                <input name="first_name" id="name2" type="text" >
+                <span class="errMsg" id="first_name_err"></span>
+                <span style="color:red;" id="displayMsg2"></span>
+            </label>
+                
+           
+       
+      
+        
+        <p>Result: <span id="result"></span></p>
+
+  <p><input type="button" value="Compare Names" onClick = "compareNames();processForm();processForm2();" />
+
+  </p>
+
+  <p>
+
+    <input type="reset" name="Reset" id="button" value="Reset" onClick="clearResults()" />
+
+    </form>
+</body>
+</html>

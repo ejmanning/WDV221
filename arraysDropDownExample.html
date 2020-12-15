@@ -1,0 +1,67 @@
+<html>
+<head>
+
+	<title>WDV221 Intro Javascript - Arrays</title>
+	
+	<script>
+	
+		let products = ["Pen", "Paper", "Pencil" ];
+		
+		let productPrice = [1.99, 5.99, 0.23];
+
+		let productInventory = [329, 532, 6400];
+	
+		console.log(products);	//displays content of array
+		
+		console.log(products[0]);	//displays Pen
+		
+		console.log(productPrice[0]); //displays Pen price
+		
+		console.log(productInventory[0]); //displays inventory for Pen
+	
+	</script>
+
+</head>
+
+<body>
+
+	<h1>WDV221 Intro Javascript</h1>
+	<h2>Unit-10 Working with Arrays</h2>
+	<h3>Examples of Drop Down lists with Arrays</h3>
+	
+	<h3>Drop down list from an array.</h3>
+	<p>	<label for="selectProducts">Choose your product: </label>
+		<select name="selectProducts" id="selectProducts">
+			<option>Please select a product</option>
+			<script>
+				for(let x=0; x<products.length; x++ ){
+					document.write("<option>" + products[x] + "</option>");
+				}
+			</script>
+		</select>
+	</p>
+
+	<h3>Drop down list using products with product price as a 'value' attribute.</h3>
+	<p>	<label for="selectProducts2">Choose your product: </label>
+		<select name="selectProducts2" id="selectProducts2">
+			<option>Please select a product</option>
+			<script>
+				for(let x=0; x<products.length; x++ ){
+					document.write("<option " + "value='" + productPrice[x] + "'>" + products[x] + "</option>");
+				}
+			</script>
+		</select>
+	</p>	
+	
+	<h3>How to know which option was selected?</h3>
+	
+	
+	
+	
+	
+	
+	
+	
+
+</body>
+</html>

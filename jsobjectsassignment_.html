@@ -1,0 +1,57 @@
+<!doctype HTML>
+<head>
+
+	<title>WDV221 Intro to Javascript</title>
+
+</head>
+
+<body>
+	<h1>WDV221 Intro to Javascript</h1>
+	<h2>Javascript Objects Assignment</h2>
+	
+<script>
+    let bookTitles = ["Beginning Javascript", "Logic with ES6", "Javascript Objects Made Easy"];
+
+    let bookPrices = [19.99, 29.49, 999.99];
+
+    let bookAuthor = ["Smith", "Johson-Parker", "Westin" ];
+
+    // 1
+    let book1=
+    {title:bookTitles[0],
+    price:bookPrices[0],
+    author:bookAuthor[0]};
+    
+    let book2={title:bookTitles[1],
+    price:bookPrices[1],
+    author:bookAuthor[1]};
+    
+    let book3={title:bookTitles[2],
+    price:bookPrices[2],
+    author:bookAuthor[2]};
+    
+   // 2
+    book1.studentDiscountPrice = function() { return book1.price *.8; }
+    book2.studentDiscountPrice = function() { return book2.price *.8; }
+    book3.studentDiscountPrice = function() { return book3.price *.8; }
+
+
+    // 3
+    let javascriptBooks=[book1, book2, book3];
+
+    // 4
+    document.writeln(book1.title," $", book1.price," ", book1.author," $",book1.studentDiscountPrice().toFixed(2));
+    document.writeln(book2.title," $", book2.price, " ",book2.author," $",book2.studentDiscountPrice().toFixed(2));
+    document.writeln(book3.title, " $",book3.price, " ",book3.author," $",book3.studentDiscountPrice().toFixed(2));
+</script>
+
+<br>
+<script>
+    //array
+    document.writeln();
+    for (x=0;x<3;x++) {
+        document.writeln(javascriptBooks[x].title, " $", javascriptBooks[x].price," ", javascriptBooks[x].author," $",javascriptBooks[x].studentDiscountPrice().toFixed(2));
+    }
+</script>
+</body>
+</html>

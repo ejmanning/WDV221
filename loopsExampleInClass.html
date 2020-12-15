@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>WDV221 Intro Javascript</title>
+
+<script>
+
+
+</script>
+</head>
+<body>
+	<h1>Loops</h1>
+	
+	<p>Display 1-5</p>
+	
+	<script>
+	//for loops = when you know how many times
+	
+	//for(initialize area; check end condition ; update loop control) {body of loop}
+	for(let i=1; i<=5; i++)
+	{document.write(i);}
+	</script>
+	
+	<p>Display 1-5 vertically each on own line</p>
+	
+	<script>
+	
+		for(let i=1; i<6; i++)
+		{document.write("<p>" + i + "<p>");}
+		
+	</script>
+	
+	<p>Display 1-5 vertically each on own line using a while loop</p>
+	<script>
+		//every loop requires:
+		//a loop control variable: something to control the loop
+		//an end condition: when does the loop stop?
+		//update the loop control variable within the body of the loop
+		//while(if this condition run the body of the loop){}
+		
+		let x=1	//setup a loop control variable
+		while(x<=5)
+		{document.write("<p>" + x + "</p>");
+		x++;}
+		
+	</script>
+	
+	<p>Display 5-1 each on their own line</p>
+	<script>
+	
+		for(let i=5; i>=1; i--)
+		{document.write("<p>" + i + "</p>");}
+	
+	</script>
+	
+	<p>Display 5-1 each on their own line with while loop</p>
+	<script>
+		let f=5;
+		while(f>=1)
+		{document.write("<p>" + f + "</p>");
+		f--;}
+	</script>
+	
+	<script>
+		let year=2020;
+		while(year>=year-25)
+		{document.write("<option>" + year + "</option>");
+		year--;}
+	</script>
+		
+</body>
+</html>

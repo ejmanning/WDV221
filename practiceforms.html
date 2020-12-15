@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset = "utf-8">
+<title>EVEN more forms practice</title>
+
+<script>
+function addValues()
+{let x = document.querySelector("#inValue1").value;
+let y = document.querySelector("#inValue2").value;
+let result = parseInt(x) + parseInt(y);
+document.querySelector("#addResult").innerHTML = result;}
+
+
+function subtractValues()
+{let x = document.querySelector("#inValue1").value;
+let y = document.querySelector("#inValue2").value;
+let result = parseFloat(x) - parseFloat(y);
+document.querySelector("#subtractResult").innerHTML = result; }
+
+function clearDisplay()
+{document.querySelector("#addResult").innerHTML="";
+document.querySelector("#subtractResult").innerHTML="";}
+</script>
+
+</head>
+<body>
+
+<form method="post" action="#">
+			<p>		
+				<label>Input 1:
+					<input type="text" name="inValue1" id="inValue1">
+				</label>
+			</p>
+			
+			<p>
+				<label>Input 2:
+					<input type="text" name="inValue2" id="inValue2">
+				</label>	
+			</p>
+			
+			<p>
+			<input type ="button" value="Add Numbers" onClick="addValues()">
+			<input type ="button" value="Subtract Numbers" onClick="subtractValues()">
+			<input type ="reset" value="Clear" onClick="clearDisplay()">
+			</p>
+</form>
+			
+			<p>Addition Result: <span id="addResult"></span></p>
+			
+			<p>Subtraction Result: <span id="subtractResult"></span></p>
+			
+</body>
+</html>

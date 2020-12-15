@@ -1,0 +1,180 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>WDV221 Intro Javascript</title>
+
+<script>
+	
+	function compareNumbers()
+	{
+		var value1=parseInt(document.querySelector("#value1").value );
+		//give a var to number 1
+		
+		var value2=parseInt(document.querySelector("#value2").value );
+		//give a var to number 2
+		
+		if (value1==value2)
+			{var result="Equal"}
+		//if they are equal it will result with "Equal"
+		else
+			{if (value1>value2)
+				{var result=value1}
+			 //if value 1 is larger then it will display
+			else
+				{var result=value2}
+			 //if value 2 is larger then it will display
+			}
+		
+		document.querySelector("#result").innerHTML=result;
+		//placing the result value of the if statement into it's own var
+		
+		
+	}
+	//end of function
+	function clearResults()
+	
+	{document.querySelector("#result").innerHTML="";
+	document.querySelector("#displayMsg").innerHTML="";
+	document.querySelector("#displayMsg2").innerHTML="";}
+	//clear span id results
+	
+	
+	 function processForm(){
+            //this will run when the form is submitted. 
+            //It will run the validation and display the message
+            //alert("insides ProcessForm()");
+
+            let inValue= document.querySelector("#value1").value; //gets the input
+            //alert( validateName(inValue)); 	//for testing purposes
+			//assign the return message to the display area on the page
+			document.querySelector("#displayMsg").innerHTML = validateNumber(inValue);
+			}
+			
+			
+        function validateNumber(inValue) {
+            //this function will validate the form input.
+            //It will display a message based upon the validation of the input.
+            //alert("inside validateName()");
+			//alert("inValue contains " + inValue);	//prove the input was passed in
+			
+			if(inValue=="" || inValue.trim()==""){
+				return "Input Required";	//return a message 
+			}
+			
+			if( inValue.indexOf("/")!= -1 || inValue.indexOf("\\")!= -1 || inValue.indexOf("'")!= -1){
+				return "Invalid Content";
+			}
+			
+			if(inValue.indexOf("-")!= -1){
+			return "Invalid Content";
+			}
+			
+			if( isNaN(inValue) ){
+				return "Invalid Content";
+			}
+			
+				
+			return true;			//return default message
+        }
+
+        function resetForm() {
+            //this function will run with the reset function to reset the form back to original view
+            //alert("inside resetForm()");
+             {document.querySelector("#displayMsg").innerHTML="";}
+        }
+        
+        
+        
+        
+        function processForm2(){
+            //this will run when the form is submitted. 
+            //It will run the validation and display the message
+            //alert("insides ProcessForm()");
+
+            let inValue= document.querySelector("#value2").value; //gets the input
+            //alert( validateName(inValue)); 	//for testing purposes
+			//assign the return message to the display area on the page
+			document.querySelector("#displayMsg2").innerHTML = validateNumber2(inValue);
+			}
+			
+			
+        function validateNumber2(inValue) {
+            //this function will validate the form input.
+            //It will display a message based upon the validation of the input.
+            //alert("inside validateName()");
+			//alert("inValue contains " + inValue);	//prove the input was passed in
+			
+			if(inValue=="" || inValue.trim()==""){
+				return "Input Required";	//return a message 
+			}
+			
+			if( inValue.indexOf("/")!= -1 || inValue.indexOf("\\")!= -1 || inValue.indexOf("'")!= -1){
+				return "Invalid Content";
+			}
+			
+			if(inValue.indexOf("-")!= -1){
+			return "Invalid Content";
+			}
+			
+			if( isNaN(inValue) ){
+				return "Invalid Content";
+			}
+			
+				
+			return true;			//return default message
+        }
+
+        function resetForm2() {
+            //this function will run with the reset function to reset the form back to original view
+            //alert("inside resetForm()");
+             {document.querySelector("#displayMsg2").innerHTML="";}
+        }
+
+
+
+	
+</script>
+
+
+</head>
+
+<body>
+<h2>WDV221 Intro Javascript</h2>
+<h3>Comparisons and IF Statements - Compare Numbers Assignment </h3>
+<hr />
+<p>Please complete the following exercises on this page. When complete post this page to your  server. Make a link in your WDV221 homework  page for this assignment. </p>
+<p>Include a comment in each script with the exercise number and a description of what the script is supposed to do.</p>
+<p>Using Blackboard submit this  Assignment.</p>
+<hr />
+<form id="form1" name="form1" method="post" action="">
+  <p>Value 1: 
+    <input type="text" name="value1" id="value1" />
+    <span style="color:red;" id="displayMsg"></span>
+  </p>
+
+  <p>Value 2: 
+    <input type="text" name="value2" id="value2" />
+    <span style="color:red;" id="displayMsg2"></span>
+  </p>
+  
+  <p>Result: <span id="result"></span></p>
+  <p>
+    <input type="button" value="Compare Numbers" onClick="compareNumbers();processForm();processForm2();"/>
+  </p>
+  <p>
+    <input type="reset" name="Reset" id="button" value="Reset" onClick="clearResults()" />
+  </p>
+</form>
+
+<p>Instructions:</p>
+<ol>
+  <li>Create a function called compareNumbers( ).</li>
+  <li>The function will compare two numbers entered in the form above. </li>
+  <li>The function should display the largest number or &quot;Equal&quot; if both values are the same.</li>
+  <li>The results will be displayed in a span element using the .innerHTML property.</li>
+  <li>Provide a reset function that will properly clear the form between attempts.</li>
+</ol>
+</body>
+</html>
+

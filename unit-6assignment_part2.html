@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>WDV221 Intro Javascript - Random Number Generator Assignment</title>
+
+<style>
+
+body {background-color:#C99;
+}
+
+.highlightTitle	{
+	font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-style:italic;
+	font-size:14px;
+	text-decoration:underline;
+	color:#096;
+}
+
+</style>
+
+<script>
+
+	function RandomNumberGenerator(){
+		document.querySelector("#randomNumber").innerHTML = Math.floor(Math.random() * 10) + 1;} //1-10
+
+</script>
+</head>
+
+<body>
+<p><b>Erica Manning, WDV221 Intro Javascript - Random Number Generator Assignment</b></p>
+<h2>Click the button below to display a random number between 1 and 10.</h2>
+
+<button onclick="RandomNumberGenerator()">Click Here</button>
+
+<h1 id="randomNumber"></h1>
+
+</body>
+</html>
+

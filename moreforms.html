@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<script>
+
+function getName() {
+let getFirstName = document.querySelector("#firstName").value;
+document.querySelector(".nameDisplay").innerHTML = getFirstName;}
+
+function getQuantity() {
+let getTheQuantity = document.querySelector("#inQuantity").value;
+document.querySelector(".quantityDisplay").innerHTML = getTheQuantity;}
+
+function getQuantityPlusTen() {
+let x = document.querySelector("#inQuantity").value;
+x = parseInt(x); //change x from string to numeric
+x +=10;
+document.querySelector(".newQuantityDisplay").innerHTML= x;}
+</script>
+
+</head>
+<body>
+
+<h1>Unit 6 - More Form Examples</h1>
+
+	<form method="post" action="#">
+
+		<p>
+			<label>First Name:
+				<input type="text" name="name" id="firstName">
+			</label>
+		</p>
+	
+		<p>
+			<label>Quantity:
+				<input type="text" name="quantity" id="inQuantity">
+			</label>
+		</p>
+		
+		<p>
+			<input type="button" value="Get Name" onClick="getName()">
+			<input type="button" value="Get Quantity" onClick="getQuantity()">
+			<input type="button" value="Quantity + 10" onClick="getQuantityPlusTen()">
+			<input type="reset" value="Try Again!">
+		</p>
+		
+	</form>	
+	
+	<p>Your Name is: <span class="nameDisplay"></span></p>
+	<p>You entered: <span class="quantityDisplay"></span></p>
+	<p>Your new Quantity: <span class="newQuantityDisplay"></span></p>
+	
+</body>
+</html>

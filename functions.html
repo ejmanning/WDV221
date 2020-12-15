@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title></title>
+
+	<script>
+	function sayHello()
+		{alert("Hello Class");}
+	
+	function writeName()
+		{document.write("<p>Erica</p>");}
+	
+	
+	// How to call a function
+	// 1. use its name in a script
+	// 2. call with an event handler
+	
+	sayHello();		//will call the function
+	
+	//event handlers used to call functions
+		//1. HTML event handler attribute
+		//2. attach event handler to an object (field)
+		//3. attach event listener to an object
+	
+	function getName()
+	//note inName is local scope
+	{let inName = prompt("Please enter your name.");
+	console.log(inName);}
+	</script>
+	
+</head>
+<body>
+<h1>WDV 221 Intro to Javascript</h1>
+<h2>Unit 3&4 - Functions</h2>
+<h3>Function Examples</h3>
+
+	<script>
+	writeName();	//output my name
+	</script>
+
+<p>
+	<button onClick="sayHello()">Say Hello!</button>
+</p>
+<p>
+	<button onClick="writeName()">Write my name!</button>
+</p>
+<p>
+	<button onClick="getName()">Get name</button>
+</p>
+</body>
+</html>	
+	

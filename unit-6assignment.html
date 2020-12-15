@@ -1,0 +1,115 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>WDV221 Intro Javascript - Operators and Textfields Assignment</title>
+
+<style>
+
+body {background-color:#C99;
+}
+
+.highlightTitle	{
+	font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-style:italic;
+	font-size:14px;
+	text-decoration:underline;
+	color:#096;
+}
+
+
+</style>
+
+
+<script>
+	var count = 0;	
+	
+	//1 This displays value 1 in the text input
+	function displayValue1()
+	{document.querySelector("#value1").value = document.querySelector("#val1").value;}
+	
+	//2 this displays value 2 in the text input
+	function displayValue2()
+	{document.querySelector("#value2").value = document.querySelector("#val2").value;}
+	
+	
+	//3
+	function multiplyNumbers()
+	{let inNum1 = document.querySelector("#val1").value;		//GET content entered by the user into the first textfield.  NOTE This is a String
+	
+	var inNum2 = document.querySelector("#val2").value;		//GET content entered by the user into the second textfield
+	
+	var outTotal = inNum1 * inNum2;	//Attempt to onvert input values from String into a number
+	
+	document.querySelector("#displayMultipliedTotal").value = outTotal;	//PUT the new value on the form so the user can see the result
+}
+
+	
+	//4
+	function addNumbers()
+	{let inNum1 = document.querySelector("#val1").value;		//GET content entered by the user into the first textfield.  NOTE This is a String
+	
+	let inNum2 = document.querySelector("#val2").value;		//GET content entered by the user into the second textfield
+	
+	let outTotal = parseFloat(inNum1) + parseFloat(inNum2);	//Attempt to onvert input values from String into a number
+	
+	document.querySelector("#displayAddedTotal").value = outTotal;}	//PUT the new value on the form so the user can see the result
+	
+	//5
+	function incrementCount()
+	{document.querySelector("#count").value = ++count;} //adds one to the count every click
+
+</script>
+
+
+</head>
+
+<body>
+<h2>WDV221 Intro Javascript</h2>
+<h3>Project 3 - Operators and Textfields - Assignment</h3>
+<hr />
+<p>Please complete the following exercises on this page. When complete post this page to your  server. Make a link in your WDV221 homework  page for this assignment. </p>
+<p>Include a comment in each script with the exercise number and a description of what the script is supposed to do.</p>
+<p>Using Blackboard submit this  Assignment.</p>
+<hr />
+<h3>Instructions</h3>
+<p>Use the form fields for the input values. For each of the following exercises create a function what will be activated by the button.  </p>
+<form name="form1" method="post" action="#">
+  <p>Enter a number for value1:
+    <input type="text" id="val1" />
+  </p>
+  <p>Enter a number for value 2:
+    <input type="text" id="val2" />
+  </p>
+  <p>1.
+    <input type="button" value="Display value1" onClick="displayValue1()" />
+    Display the value you entered for value1:
+    <input type="text" id="value1"/>
+  </p>
+  <p>2.
+    <input type="button" value="Display value2" onClick="displayValue2()" />
+    Display the value you entered for value2:
+  <input type="text" id="value2"/>
+  </p>
+  <p>3.
+    <input type="button" value="Multiply" onClick="multiplyNumbers()"/>
+    Display the value of value1 * value2:
+  <input type="text" id="displayMultipliedTotal"/>
+  </p>
+  <p>4.
+    <input type="button" value="Add" onClick="addNumbers()" />
+    Display the results of value1 + value2 in the following textfield.
+  <input type="text" id="displayAddedTotal"/>
+  </p>
+  <p>5.
+    <input type="button" value="Increment count" onClick="incrementCount()" />
+    Use the increment operator to add 1 to count and display the new value of count.
+  <input type="text" id="count"/>
+  </p>
+  <p>
+    <input type="reset" name="Reset" id="button" value="Reset">
+  </p>
+</form>
+<p>&nbsp;</p>
+</body>
+</html>

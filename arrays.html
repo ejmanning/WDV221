@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html dir="ltr">
+  <head>
+    <script>
+     //define an array
+     let products = ["Pen", "Paper", "Pencil"];
+     let productPrice = [1.99, 5.99, 0.23];
+     let productInventory = [329, 532, 6400];
+    </script>
+  </head>
+  <body>
+  <script>
+  document.write( products[0]);
+  document.write( products[1]);
+  document.write( products[2]);
+  document.write("<br>");
+  </script>
+  
+  <script>
+  for(let x=0; x<products.length; x++ )
+  {document.write(products[x]);
+  document.write("<br>");}
+  </script>
+  
+  <select>
+  	<option>
+  	<script>
+  	for(let x=0; x<products.length; x++ )
+  {document.write("<option>" + products[x] + "</option>");} 
+  	</script>
+  	</option>
+  </select>
+  </body>
+</html>
+
+ 

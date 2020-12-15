@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset = "utf-8">
+<title>Unit 6</title>
+	<script>
+		function getFirstName()
+		{alert("inside getFirstName()");
+		let inFName = document.querySelector("#inputFirstName").value;
+		console.log("First Name = " + inFName);}
+		
+		function setFirstName(inName)
+		{alert("inside setFirstName()");
+		let setName = document.querySelector("#inputFirstName").value = inName;}
+		
+		function displayName()
+		{alert("inside displayName()");
+		let inFName = document.querySelector("#inputFirstName").value;
+		document.querySelector("p span").innerHTML = inFName;}
+	</script>
+</head>
+<body>
+	<form method="post" action="#">
+			<p>
+				<label>First Name:
+					<input type="text" name="inputFirstName" id="inputFirstName">
+				</label>
+			</p>
+			<p>
+				<label for "inputLastName">Last Name:</label>
+					<input type="text" name="inputLastName" id="inputLastName">
+			</p>
+	
+			<p>
+				<input type="reset" name="reset" value="Reset">
+				<input type="button" name="submit" value="Submit" onClick="getFirstName()">
+				<input type="button" name="setName" value="Set First Name" onClick="setFirstName('Tim')">
+				<input type="button" name="displayFirstName" value="Display Name" onClick="displayName()">
+			</p>
+	
+	</form>
+	
+	<p>
+	Display the Name: <span></span>
+	</p>
+	
+</body>
+</html>
